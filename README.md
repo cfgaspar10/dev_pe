@@ -1,7 +1,26 @@
 Docker RHSISPEN APACHE/PHP/PHPMYADMIN/MARIADB versão desenvolvimento
 =========
    
-   ### Instalação Docker
+   
+   
+    #Passos para executar a composição dos containers
+    $ git clone https://github.com/cfgaspar10/dev_pe.git
+    $ cd dev_pe  
+    $ sudo docker-compose up -d --build
+    $ sudo docker ps(para verificar os containers em execução)
+    
+    ### Acessar Container "www".
+    $ sudo docker exec -ti docker_dev_pe_www_1 /bin/bash
+    ### Acessar Container "db".
+    $ sudo docker exec -ti docker_dev_pe_db_1 /bin/bash
+     ### Acessar Container "phpmyadmin".
+    $ sudo docker exec -ti docker_dev_pe_phpmyadmin_1 /bin/bash
+     
+    Browser Servidor -> [http://localhost:8084/)
+    Browser phpMyAdmin -> [http://localhost:8085]
+  
+  =========
+### Instalação Docker
    
    $ sudo apt-get update
    
@@ -25,23 +44,26 @@ Docker RHSISPEN APACHE/PHP/PHPMYADMIN/MARIADB versão desenvolvimento
    
    $ sudo docker-compose --version
    
-=========
-   
-    #Passos para executar a composição dos containers
-    $ git clone https://github.com/cfgaspar10/dev_pe.git
-    $ cd dev_pe  
-    $ sudo docker-compose up -d --build
-    $ sudo docker ps(para verificar os containers em execução)
-    
-    ### Acessar Container "www".
-    $ sudo docker exec -ti docker_dev_pe_www_1 /bin/bash
-    ### Acessar Container "db".
-    $ sudo docker exec -ti docker_dev_pe_db_1 /bin/bash
-     ### Acessar Container "phpmyadmin".
-    $ sudo docker exec -ti docker_dev_pe_phpmyadmin_1 /bin/bash
-     
-    Browser Servidor -> [http://localhost:8084/)
-    Browser phpMyAdmin -> [http://localhost:8085]
-  
-=========
+   =========
 
+   ### Docker comandos básicos
+   $ sudo docker ps (verifica containers em execução)
+   
+   $ sudo docker-compose up -d --build (buildar as imagens, neste caso usa-se na primeira execução, após build, usar o comando abaixo)
+   
+   $ sudo docker-compose up -d (iniciar os conjuntos de containers)
+   
+   $ sudo docker-compose stop (parar os conjuntos de containers)
+   
+   $ sudo docker-compose down -v (para excluir images e volumes)
+   
+   $ sudo docker images -ls (lista imagens)
+    
+   $ sudo docker docker volume ls (lista volumes)
+   
+   $ sudo docker docker docker container ls (lista containers em execução)
+   
+   $ sudo docker docker docker container ls -a (lista containers instalados no Dockerhost)
+   
+   
+  
