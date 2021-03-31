@@ -59,11 +59,11 @@ Docker RHSISPEN APACHE/PHP/PHPMYADMIN/MARIADB versão desenvolvimento
    
    $ sudo docker images -ls (lista imagens)
     
-   $ sudo docker volume ls (lista volumes)
+   $ sudo docker docker volume ls (lista volumes)
    
-   $ sudo docker container ls (lista containers em execução)
+   $ sudo docker docker docker container ls (lista containers em execução)
    
-   $ sudo docker container ls -a (lista containers instalados no Dockerhost)
+   $ sudo docker docker docker container ls -a (lista containers instalados no Dockerhost)
    
-   **Mais sobre comandos básicos Docker-> https://url.gratis/u0sDp**  
-
+   
+  
